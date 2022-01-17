@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <div class="top-container">
     <Header />
     <Routes>
       <Route 
@@ -22,7 +22,7 @@ function App() {
     }>
     </Route>
     </Routes>
-    </>
+    </div>
   );
 }
 

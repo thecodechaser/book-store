@@ -1,10 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+/* styles */
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* style for header*/
 
 .header {
     display: flex;
 }
 
+.header-h1 {
+    color: #0290ff;
+    font-family: Montserrat;
+    font-size: 35px;
+}
+
 .nav-links {
     list-style-type: none;
     display: flex;
+    gap: 10px;
+    font-size: 20px;
+    margin-top: 35px;
 }
+
+.nav-item {
+    text-decoration: none;
+    color: #121212;
+}
+
+/* style for books */
+
+.add-book-h2 {
+    color: #888888;
+    font-family: Montserrat;
+}
+
+.form {
+    display: flex;
+    gap: 20px;
+}
+
+/* style for categories */
