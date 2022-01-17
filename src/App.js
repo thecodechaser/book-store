@@ -8,9 +8,20 @@ function App() {
   return (
     <>
     <Header />
-    <div className="App">
-     <p>Hello</p>
-    </div>
+    <Routes>
+      <Route 
+      path="/"
+      element={
+        <Books />
+      }>
+    </Route>
+    <Route 
+    path="/categories"
+    element={
+      <Categories />
+    }>
+    </Route>
+    </Routes>
     </>
   );
 }
