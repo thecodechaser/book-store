@@ -1,1 +1,10 @@
-/* styles */
+/* style for header*/
+
+.header {
+    display: flex;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}

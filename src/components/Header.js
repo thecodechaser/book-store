@@ -17,14 +17,14 @@ const Header  = () => {
 
 
     return (
-        <header>
-            <h1>Bookstore CMS</h1>
+        <header className="header">
+            <h1 className="header-h1">Bookstore CMS</h1>
             <nav>
-            <ul>
+            <ul className="nav-links">
                 {
                     links.map((link) =>(
                         <li key={link.id}>
-                            <NavLink to={link.path}>hello</NavLink>
+                            <NavLink to={link.path} className="nav-item">{link.text}</NavLink>
                         </li>
                     ))
                 }

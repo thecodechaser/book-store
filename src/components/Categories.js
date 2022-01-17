@@ -2,7 +2,9 @@ import React from "react";
 
 const Categories = () => {
     return(
-        <div>Hello</div>
+        <main>
+            <h1>Under Construction!</h1>
+        </main>
     );
 }
 
