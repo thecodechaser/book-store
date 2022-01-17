@@ -71,3 +71,8 @@ body {
 }
 
 /* style for categories */
+
+.category-h1 {
+    color: #0290ff;
+    font-family: Montserrat;
+}
