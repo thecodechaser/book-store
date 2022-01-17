@@ -8,9 +8,9 @@ const Books = () =>{
             </div>
             <h2 class="add-book-h2">ADD NEW BOOK</h2>
             <form class="form">
-                <input className="book-title" type="text" placeholder="Book title"></input>
-                <input type="text" placeholder="Category"></input>
-                <button type="submit">Add Book</button>
+                <input className="input-title" type="text" placeholder="Book title"></input>
+                <input className="input-category" type="text" placeholder="Category"></input>
+                <button className="add-book-btn" type="submit">Add Book</button>
             </form>
         </main>
     );
