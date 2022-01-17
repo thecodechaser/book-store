@@ -11,7 +11,10 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
-   width: 80%;
+    margin: 50px 100px;
+    padding: 20px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* style for header*/
