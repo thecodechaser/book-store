@@ -18,8 +18,8 @@ const BookItem = (props) => {
 };
 
 BookItem.propTypes = {
-  book: ({
-    id: PropTypes.string,
+  book: PropTypes.shape({
+    id: PropTypes.number,
     title: PropTypes.string,
   }).isRequired,
 };
