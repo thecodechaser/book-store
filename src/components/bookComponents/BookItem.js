@@ -9,7 +9,10 @@ const BookItem = (props) => {
       id, title, author,
     },
   } = props;
- 
+  const dispatch = useDispatch();
+  const removeBookFromStore = () => {
+    dispatch(removeBook({ id }));
+  };
   return (
     <div className="book-container">
       <h3 className="book-title">
