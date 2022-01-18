@@ -1,12 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const BookItem = () => (
-  <div className="book-container">
-    <h3 className="book-title">
-      Number The Stars
-    </h3>
-    <button className="remove-btn" type="button">Remove</button>
-  </div>
-);
+const BookItem = (props) => {
+  const {
+    book: {
+      title,
+    },
+  } = props;
+  return (
+    <div className="book-container">
+      <h3 className="book-title">
+        {title}
+      </h3>
+      <button className="remove-btn" type="button">Remove</button>
+    </div>
+  );
+};
+
+BookItem.propTypes = {
+  book: ({
+    id: PropTypes.string,
+    title: PropTypes.string,
+  }).isRequired,
+};
 
 export default BookItem;
