@@ -84,7 +84,20 @@ body {
   gap: 50px;
 }
 
+.book-title {
+  color: #121212;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 20px;
+}
 
+.remove-btn {
+  color: #4386bf;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 17px;
+}
 
 /* style for categories */
 
