@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Book = () => (
+const BookItem = () => (
   <div className="book-container">
     <h3 className="book-title">
       Number The Stars
@@ -9,4 +9,4 @@ const Book = () => (
   </div>
 );
 
-export default Book;
+export default BookItem;

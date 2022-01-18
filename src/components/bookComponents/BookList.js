@@ -1,10 +1,10 @@
 import React from 'react';
-import Book from './Book';
+import BookItem from './BookItem';
 
 const BookList = () => (
   <div>
     <h2 className="booklist-h2">Book List</h2>
-    <Book />
+    <BookItem />
   </div>
 );
 
