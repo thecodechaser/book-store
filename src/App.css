@@ -80,7 +80,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.book-container {
+.title-container {
   display: flex;
   gap: 50px;
 }
@@ -88,7 +88,15 @@ body {
 .book-title {
   color: #121212;
   font-family: 'RobotoSlab', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.book-author {
+  color: #4386bf;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 14px;
 }
 
 .remove-btn {
@@ -97,7 +105,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   font-family: 'RobotoSlab', sans-serif;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 /* style for categories */

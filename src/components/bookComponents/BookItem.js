@@ -15,13 +15,15 @@ const BookItem = (props) => {
   };
   return (
     <div className="book-container">
-      <h3 className="book-title">
-        {title}
-      </h3>
-      <h3 className="book-title">
+      <div className="title-container">
+        <h3 className="book-title">
+          {title}
+        </h3>
+        <button className="remove-btn" type="button" onClick={removeBookFromStore}>Remove</button>
+      </div>
+      <h3 className="book-author">
         {author}
       </h3>
-      <button className="remove-btn" type="button" onClick={removeBookFromStore}>Remove</button>
     </div>
   );
 };
