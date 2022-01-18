@@ -19,7 +19,6 @@ const BookItem = (props) => {
 
 BookItem.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.number,
     title: PropTypes.string,
   }).isRequired,
 };
