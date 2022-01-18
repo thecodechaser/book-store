@@ -17,6 +17,7 @@ Project's features are added into seperate branch to keep main branch safe.
 - JavaScript
 - Webpack
 - REACT
+- Redux
 
 ## Online live link
 
