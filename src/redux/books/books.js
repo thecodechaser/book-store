@@ -48,6 +48,15 @@ export const fetchBookApi = () => async (dispatch) => {
   }
 };
 
+export const removeBookApi = (payload) => async (dispatch) => {
+  try {
+    await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books/${payload}`);
+    dispatch(removeBook(payload));
+  } catch (error) {
+    return error;
+  }
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
