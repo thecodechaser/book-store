@@ -19,6 +19,22 @@ const fetchBook = (payload) => ({
   payload,
 });
 
+export const fetchBookApi = () => async (dispatch) => {
+  try {
+    const { data } = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oF2DlchTxHbEjx4GHO3I/books');
+
+    const Books = Object.keys(data).map((key) => ({
+      ...data[key][0],
+      item_id: key,
+    }));
+
+    const payload = Object.values(Books);
+    dispatch(fetchBook(payload));
+  } catch (error) {
+    return error;
+  }
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
