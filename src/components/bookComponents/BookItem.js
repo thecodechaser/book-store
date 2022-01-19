@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -6,12 +7,12 @@ import { removeBook } from '../../redux/books/books';
 const BookItem = (props) => {
   const {
     book: {
-      id, title, author,
+      item_id, title, category,
     },
   } = props;
   const dispatch = useDispatch();
   const removeBookFromStore = () => {
-    dispatch(removeBook({ id }));
+    dispatch(removeBook({ item_id }));
   };
   return (
     <div className="book-container">
@@ -22,7 +23,7 @@ const BookItem = (props) => {
         <button className="remove-btn" type="button" onClick={removeBookFromStore}>Remove</button>
       </div>
       <h3 className="book-author">
-        {author}
+        {category}
       </h3>
     </div>
   );
@@ -30,9 +31,9 @@ const BookItem = (props) => {
 
 BookItem.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string,
+    item_id: PropTypes.string,
     title: PropTypes.string,
-    author: PropTypes.string,
+    category: PropTypes.string,
   }).isRequired,
 };
 
