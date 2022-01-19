@@ -25,7 +25,7 @@ const fetchBook = (payload) => ({
 
 export const fetchBookApi = () => async (dispatch) => {
   try {
-    const { data } = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/oF2DlchTxHbEjx4GHO3I/books');
+    const { data } = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books');
 
     const Books = Object.keys(data).map((key) => ({
       ...data[key][0],
@@ -45,8 +45,8 @@ const reducer = (state = initialState, action) => {
       return [...state, action.payload];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload.id);
-      case FETCH_BOOK:
-        return action.payload;
+    case FETCH_BOOK:
+      return action.payload;
     default:
       return state;
   }
