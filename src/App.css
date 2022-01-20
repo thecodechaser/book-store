@@ -228,8 +228,7 @@ body {
 /* style for desktop */
 
 @media screen and (min-width: 1080px) {
-  
-  .top-container { 
+  .top-container {
     margin: 50px 80px;
   }
 
