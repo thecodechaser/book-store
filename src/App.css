@@ -71,6 +71,11 @@ body {
   width: 400px;
 }
 
+.input-author {
+  padding: 10px;
+  width: 300px;
+}
+
 .input-category {
   padding: 10px;
 }
@@ -93,7 +98,6 @@ body {
 .title-container {
   display: flex;
   flex-direction: column;
-  /* gap: 50px; */
 }
 
 .book-title {
@@ -101,13 +105,16 @@ body {
   font-family: 'RobotoSlab', sans-serif;
   font-size: 30px;
   margin: 0;
-  /* margin-top: 5px; */
+  margin-bottom: 5px;
 }
 
 .book-author {
   color: #4386bf;
   font-family: 'RobotoSlab', sans-serif;
   font-size: 14px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 300;
 }
 
 .book-btns {
@@ -129,23 +136,31 @@ body {
 }
 
 .progress-bar {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
 }
 
 .progress-value-c {
   display: flex;
   flex-direction: column;
-  height: 50px;
-  width: 50px;
+  margin-top: 5px;
 }
 
 .progress-percentage {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
   margin: 0;
+  color: #121212;
+  font-weight: 500;
 }
 
 .progress-completed {
   margin: 0;
+  margin-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+  opacity: 0.5;
+  font-size: 15px;
 }
 
 .update-progg-c {

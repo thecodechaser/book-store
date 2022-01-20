@@ -15,7 +15,7 @@ const BookItem = (props) => {
     dispatch(removeBookApi(id));
   };
 
-  const percentage = 60;
+  const percentage = 65;
   return (
     <div className="book-container">
       <div className="title-container">
@@ -38,14 +38,20 @@ const BookItem = (props) => {
           className="progress-bar"
         />
         <div className="progress-value-c">
-          <p className="progress-percentage">{percentage}%</p>
+          <p className="progress-percentage">
+            {percentage}
+            %
+          </p>
           <p className="progress-completed">Completed</p>
         </div>
       </div>
       <div className="update-progg-c">
         <h2 className="chapter-h2">CURRENT CHAPTER</h2>
-        <h3 className="chapter-h3">Chapter {' '}
-            { `${Math.floor(Math.random() * 50)}`}</h3>
+        <h3 className="chapter-h3">
+          Chapter
+          {' '}
+          { `${Math.floor(Math.random() * 50)}`}
+        </h3>
         <button type="button" className="update-progg-btn">Update Progress</button>
       </div>
     </div>
