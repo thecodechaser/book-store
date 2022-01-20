@@ -46,6 +46,10 @@ body {
 
 /* style for books */
 
+.book-container {
+  display: flex;
+}
+
 .add-book-h2 {
   color: #888;
   font-family: 'Montserrat', sans-serif;
@@ -83,7 +87,7 @@ body {
 .title-container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  /* gap: 50px; */
 }
 
 .book-title {
@@ -91,7 +95,7 @@ body {
   font-family: 'RobotoSlab', sans-serif;
   font-size: 30px;
   margin: 0;
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
 .book-author {
