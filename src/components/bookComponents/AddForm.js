@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../../redux/books/books';
+import { addBookApi } from '../../redux/books/books';
 
 const AddForm = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const addBookToStore = (e) => {
     e.preventDefault();
-    if (title === '' || author === '') return;
+    if (title === '' || category === '') return;
     const newBook = {
       id: uuidv4(),
       title,
-      author,
+      category,
     };
 
-    dispatch(addBook(newBook));
+    dispatch(addBookApi(newBook));
     setTitle('');
-    setAuthor('');
+    setCategory('');
   };
   return (
     <form className="form">
@@ -36,10 +36,15 @@ const AddForm = () => {
         className="input-author"
         type="text"
         placeholder="Book author..."
-        value={author}
-        onChange={(e) => setAuthor(e.target.value)}
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
       />
-      <input className="input-category" type="text" placeholder="Category" />
+      <select name="category" className="input-category">
+        <option value="action">Action</option>
+        <option value="science">Science</option>
+        <option value="romance">Romance</option>
+        <option value="thriller">Thriller</option>
+      </select>
       <button className="add-book-btn" type="submit" onClick={addBookToStore}>Add Book</button>
     </form>
   );
