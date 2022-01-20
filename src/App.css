@@ -96,6 +96,7 @@ body {
 }
 
 .title-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -131,6 +132,7 @@ body {
 }
 
 .progress-bar-c {
+  /* width: 100%; */
   display: flex;
   gap: 20px;
 }
@@ -164,6 +166,7 @@ body {
 }
 
 .update-progg-c {
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
 }

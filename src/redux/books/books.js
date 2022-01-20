@@ -26,12 +26,12 @@ const fetchBook = (payload) => ({
 export const addBookApi = (payload) => async (dispatch) => {
   const { id, title, category } = payload;
   const newBook = { item_id: id, title, category };
-  await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books', newBook);
+  await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ihHFtrkDGalHB4Kt6Ws8/books', newBook);
   dispatch(addBook(payload));
 };
 
 export const fetchBookApi = () => async (dispatch) => {
-  const books = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books');
+  const books = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ihHFtrkDGalHB4Kt6Ws8/books');
   const mapBooks = Object.entries(books.data).map(([id, book]) => {
     const { category, title } = book[0];
     return { id, category, title };
@@ -40,7 +40,7 @@ export const fetchBookApi = () => async (dispatch) => {
 };
 
 export const removeBookApi = (id) => async (dispatch) => {
-  await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books/${id}`);
+  await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ihHFtrkDGalHB4Kt6Ws8/books/${id}`);
   dispatch(removeBook(id));
 };
 
