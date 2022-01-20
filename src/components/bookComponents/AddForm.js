@@ -39,7 +39,12 @@ const AddForm = () => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
-      <input className="input-category" type="text" placeholder="Category" />
+      <select name="category" className="input-category">
+        <option value="action">Action</option>
+        <option value="science">Science</option>
+        <option value="romance">Romance</option>
+        <option value="thriller">Thriller</option>
+      </select>
       <button className="add-book-btn" type="submit" onClick={addBookToStore}>Add Book</button>
     </form>
   );
