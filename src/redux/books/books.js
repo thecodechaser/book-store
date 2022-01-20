@@ -24,10 +24,10 @@ const fetchBook = (payload) => ({
   payload,
 });
 
-export const addBookApi = (formData) => async (dispatch) => {
+export const addBookApi = (newBook) => async (dispatch) => {
   try {
-    await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books', formData);
-    dispatch(addBook(formData));
+    await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books', newBook);
+    dispatch(addBook(newBook));
   } catch (error) {
     return error;
   }
