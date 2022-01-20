@@ -49,6 +49,11 @@ body {
 .book-container {
   display: flex;
   gap: 200px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding: 25px;
+  margin: 15px 0;
 }
 
 .add-book-h2 {
@@ -122,6 +127,7 @@ body {
   display: flex;
   height: 100px;
   width: 100px;
+  gap: 20px;
 }
 
 .progress-value-c {
