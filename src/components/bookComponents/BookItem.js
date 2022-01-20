@@ -31,20 +31,22 @@ const BookItem = (props) => {
           <button className="remove-btn" type="button">Edit</button>
         </div>
       </div>
-      <div className="progress-bar">
+      <div className="progress-bar-c">
         <CircularProgressbar
           value={percentage}
           styles={buildStyles({ pathColor: '#0EA5E9', marginRight: '10px' })}
+          className="progress-bar"
         />
         <div className="progress-value-c">
-          <p>{percentage}</p>
-          <p>Completed</p>
+          <p className="progress-percentage">{percentage}%</p>
+          <p className="progress-completed">Completed</p>
         </div>
       </div>
       <div className="update-progg-c">
         <h2 className="chapter-h2">CURRENT CHAPTER</h2>
-        <h3 className="chapter-h3">Chapter</h3>
-        <button type="button">Update Progress</button>
+        <h3 className="chapter-h3">Chapter {' '}
+            { `${Math.floor(Math.random() * 50)}`}</h3>
+        <button type="button" className="update-progg-btn">Update Progress</button>
       </div>
     </div>
   );
