@@ -48,6 +48,7 @@ body {
 
 .book-container {
   display: flex;
+  gap: 200px;
 }
 
 .add-book-h2 {
@@ -104,6 +105,10 @@ body {
   font-size: 14px;
 }
 
+.book-btns {
+  display: flex;
+}
+
 .remove-btn {
   color: #4386bf;
   border: none;
@@ -114,8 +119,21 @@ body {
 }
 
 .progress-bar {
+  display: flex;
+  height: 100px;
+  width: 100px;
+}
+
+.progress-value-c {
+  display: flex;
+  flex-direction: column;
   height: 50px;
   width: 50px;
+}
+
+.update-progg-c {
+  display: flex;
+  flex-direction: column;
 }
 
 /* style for categories */
