@@ -14,6 +14,8 @@ const BookItem = (props) => {
   const removeBookFromStore = () => {
     dispatch(removeBookApi(id));
   };
+
+  const percentage = 60;
   return (
     <div className="book-container">
       <div className="title-container">
@@ -21,10 +23,19 @@ const BookItem = (props) => {
           {title}
         </h3>
         <button className="remove-btn" type="button" onClick={removeBookFromStore}>Remove</button>
-      </div>
-      <h3 className="book-author">
+          <h3 className="book-author">
         {category}
       </h3>
+      </div>
+      <div className="progress-bar">
+      <CircularProgressbar
+            value={percentage}
+            styles={buildStyles({ pathColor: '#0EA5E9', marginRight: '10px' })}
+          />
+      </div>
+      <div>
+
+      </div>
     </div>
   );
 };
