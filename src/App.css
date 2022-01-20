@@ -109,6 +109,11 @@ body {
   font-size: 15px;
 }
 
+.progress-bar {
+  height: 50px;
+  width: 50px;
+}
+
 /* style for categories */
 
 .category-h1 {
