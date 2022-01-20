@@ -21,6 +21,8 @@ body {
 /* style for header */
 
 .header {
+  margin-left: 160px;
+  align-self: flex-start;
   display: flex;
 }
 
@@ -42,6 +44,20 @@ body {
   text-decoration: none;
   color: #121212;
   font-family: 'Montserrat', sans-serif;
+}
+
+.user-icon-c {
+  position: absolute;
+  border-radius: 15px;
+  background-color: #e8e8e8;
+  height: 35px;
+  right: 150px;
+}
+
+.user-icon {
+  color: #0290ff;
+  font-size: 25px;
+  padding: 5px;
 }
 
 /* style for books */

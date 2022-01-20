@@ -31,7 +31,9 @@ const Header = () => {
 
         </ul>
       </nav>
-      <ImUser />
+      <div className="user-icon-c">
+        <ImUser className="user-icon" />
+      </div>
     </header>
   );
 };
