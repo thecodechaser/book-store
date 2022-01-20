@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaBeer } from 'react-icons/fa';
 
 const Header = () => {
   const links = [
@@ -30,6 +31,7 @@ const Header = () => {
 
         </ul>
       </nav>
+      <FaBeer />
     </header>
   );
 };
