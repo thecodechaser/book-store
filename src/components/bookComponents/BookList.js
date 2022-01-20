@@ -13,7 +13,7 @@ const BookList = () => {
     <div>
       {books.length ? (
         books.map((book) => (
-          <BookItem book={book} key={book.item_id} />
+          <BookItem book={book} key={book.id} />
         ))
       ) : (
         <h3 className="booklist-h3">There is no books!</h3>

@@ -1,4 +1,3 @@
-/* eslint-disable consistent-return */
 import Axios from 'axios';
 
 // actions
@@ -24,38 +23,25 @@ const fetchBook = (payload) => ({
   payload,
 });
 
-export const addBookApi = (newBook) => async (dispatch) => {
-  try {
-    await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books', newBook);
-    dispatch(addBook(newBook));
-  } catch (error) {
-    return error;
-  }
+export const addBookApi = (payload) => async (dispatch) => {
+  const { id, title, category } = payload;
+  const newBook = { item_id: id, title, category };
+  await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books', newBook);
+  dispatch(addBook(payload));
 };
 
 export const fetchBookApi = () => async (dispatch) => {
-  try {
-    const { data } = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books');
-
-    const Books = Object.keys(data).map((key) => ({
-      ...data[key][0],
-      item_id: key,
-    }));
-
-    const payload = Object.values(Books);
-    dispatch(fetchBook(payload));
-  } catch (error) {
-    return error;
-  }
+  const books = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books');
+  const mapBooks = Object.entries(books.data).map(([id, book]) => {
+    const { category, title } = book[0];
+    return { id, category, title };
+  });
+  dispatch(fetchBook(mapBooks));
 };
 
-export const removeBookApi = (payload) => async (dispatch) => {
-  try {
-    await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books/${payload}`);
-    dispatch(removeBook(payload));
-  } catch (error) {
-    return error;
-  }
+export const removeBookApi = (id) => async (dispatch) => {
+  await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aJ1C6sv1BEj2T5q0Iuzn/books/${id}`);
+  dispatch(removeBook(id));
 };
 
 const reducer = (state = initialState, action) => {
@@ -63,7 +49,7 @@ const reducer = (state = initialState, action) => {
     case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.item_id !== action.payload);
+      return state.filter((book) => book.id !== action.payload);
     case FETCH_BOOK:
       return action.payload;
     default:

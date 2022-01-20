@@ -12,7 +12,7 @@ const AddForm = () => {
     e.preventDefault();
     if (title === '' || category === '') return;
     const newBook = {
-      item_id: uuidv4(),
+      id: uuidv4(),
       title,
       category,
     };
