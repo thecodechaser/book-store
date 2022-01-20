@@ -30,6 +30,7 @@ const AddForm = () => {
         placeholder="Book title..."
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        maxLength="20"
       />
       <input
         required
@@ -38,6 +39,7 @@ const AddForm = () => {
         placeholder="Book author..."
         value={category}
         onChange={(e) => setCategory(e.target.value)}
+        maxLength="15"
       />
       <select name="category" className="input-category">
         <option value="action">Action</option>
