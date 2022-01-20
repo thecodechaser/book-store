@@ -26,9 +26,9 @@ const BookItem = (props) => {
           {category}
         </h3>
         <div className="book-btns">
-        <button className="remove-btn" type="button" >Comments</button>
-        <button className="remove-btn" type="button" onClick={removeBookFromStore}>Remove</button>
-        <button className="remove-btn" type="button" >Edit</button>
+          <button className="remove-btn" type="button">Comments</button>
+          <button className="remove-btn" type="button" onClick={removeBookFromStore}>Remove</button>
+          <button className="remove-btn" type="button">Edit</button>
         </div>
       </div>
       <div className="progress-bar">
@@ -37,13 +37,13 @@ const BookItem = (props) => {
           styles={buildStyles({ pathColor: '#0EA5E9', marginRight: '10px' })}
         />
         <div className="progress-value-c">
-        <p>{percentage}</p>
-        <p>Completed</p>
+          <p>{percentage}</p>
+          <p>Completed</p>
         </div>
       </div>
       <div className="update-progg-c">
-        <h2>Current Chapter</h2>
-        <h3>Chapter</h3>
+        <h2 className="chapter-h2">CURRENT CHAPTER</h2>
+        <h3 className="chapter-h3">Chapter</h3>
         <button type="button">Update Progress</button>
       </div>
     </div>

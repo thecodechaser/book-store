@@ -142,6 +142,24 @@ body {
   flex-direction: column;
 }
 
+.chapter-h2 {
+  color: #121212;
+  opacity: 0.5;
+  font-family: 'RobotoSlab', sans-serif;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.chapter-h3 {
+  color: #121212;
+  font-family: 'RobotoSlab', sans-serif;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
 /* style for categories */
 
 .category-h1 {
