@@ -58,6 +58,7 @@ body {
   color: #0290ff;
   font-size: 25px;
   padding: 5px;
+  cursor: pointer;
 }
 
 /* style for books */
@@ -99,7 +100,7 @@ body {
 }
 
 .add-book-btn {
-  width: 100px;
+  width: 130px;
   background-color: #0290ff;
   color: #fff;
   font-weight: bold;
@@ -184,7 +185,6 @@ body {
 }
 
 .update-progg-c {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
 }
@@ -209,7 +209,7 @@ body {
 }
 
 .update-progg-btn {
-  width: 200px;
+  width: 150px;
   background-color: #0290ff;
   color: #fff;
   border: none;
